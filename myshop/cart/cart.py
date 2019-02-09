@@ -56,3 +56,37 @@ class Cart(object):
             del self.cart[product_id]
             self.save()
 
+
+    def __iter__(self):
+        """
+        Iteracja przez elementy koszyka i pobranie produktów z bazy danych
+        :return:
+        """
+        product_ids = self.cart.keys()
+        for product in product_ids:
+            self.cart[str(product.id)]['product'] = product
+
+        for item in self.cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price'] * item['quantity']
+            yield item
+
+
+    def __len__(self):
+        """
+        Obliczenie liczby wszystkich elementów w koszyku na zakupy
+        :return:
+        """
+        return sum(item['quantity'] for item in self.cart.values())
+
+
+    def get_total_price(self):
+        return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+
+
+    def clear(self):
+        #Usunięcie koszyka na zakupy z sesji
+        del self.session[settings.CART_SESSION_ID]
+        self.session.modified = True
+
+
