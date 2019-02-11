@@ -46,5 +46,3 @@ class OrderItem(models.Model):
 
 
 
-
-
