@@ -26,6 +26,7 @@ urlpatterns = [
     path('orders/', include(('orders.urls', "orders"), namespace=None)),
     path('', include(('shop.urls', "shop"), namespace=None)),
     path('paypal/', include(('paypal.standard.ipn.urls'), namespace=None)),
+    path('payment/', include(('payment.urls', "payment"), namespace=None)),
 ]
 
 if settings.DEBUG:

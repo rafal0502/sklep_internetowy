@@ -5,7 +5,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.urls import reverse
 from paypal.standard.forms import PayPalPaymentsForm
-
+from django.views.decorators.csrf import csrf_exempt
 from orders.models import Order
 
 
@@ -27,3 +27,25 @@ def payment_process(request):
 
     form = PayPalPaymentsForm(initial=paypal_dict)
     return render(request,)
+
+
+@csrf_exempt
+def payment_done(request):
+    return render(request, 'payment/done.html')
+
+
+@csrf_exempt
+def payment_canceled(request):
+    return render(request, 'payment/canceled.html')
+
+
+
+
+
+
+
+
+
+
+
+
