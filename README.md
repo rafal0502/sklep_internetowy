@@ -1,11 +1,11 @@
 # sklep_internetowy
-technologia : Django
-zapytania celery 
-mechanizm sesji 
-integracja z paypal
-wysyłanie e-mail z potwierdzeniem zamówienia
-
-
+<ul>
+  <li>technologia : Django</li>
+  <li>zapytania celery</li>
+  <li>mechanizm sesji</li>
+  <li>integracja z paypal</li>
+  <li>wysyłanie e-mail z potwierdzeniem zamówienia</li> 
+</ul>
 
 
 
