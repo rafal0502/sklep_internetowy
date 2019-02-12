@@ -3,6 +3,9 @@ Sklep internetowy (django, zapytania celery, mechanizm sesji, integracja z paypa
 
 <p align="center">
   <img src=/myshop/Koszyk.png" width="350" title="Koszyk">
-  <img src="/myshop/PayPal.png" width="350" title="PayPal">
-  <img src="/myshop/Sklep.jpg" width="350" title="Sklep">                                                               
+  <img src="/myshop/PayPal.png" width="350" title="PayPal">                                                             
+</p>
+
+<p align="center">
+  <img src="/myshop/Sklep.jpg" width="350" title="Sklep"> 
 </p>
