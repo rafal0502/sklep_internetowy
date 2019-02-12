@@ -6,7 +6,7 @@ Sklep internetowy (django, zapytania celery, mechanizm sesji, integracja z paypa
 </p>
 
 <p align="center">
-  <img src="/myshop/PayPal.png" width="300" height="300" title="PayPal">                                                             
+  <img src="/myshop/PayPal.png" title="PayPal">                                                             
 </p>
 
 <p align="center">
