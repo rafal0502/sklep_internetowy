@@ -25,7 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('orders/', include(('orders.urls', "orders"), namespace=None)),
     path('', include(('shop.urls', "shop"), namespace=None)),
+    path('paypal/', include(('paypal.standard.ipn.urls'), namespace=None)),
+    path('payment/', include(('payment.urls', "payment"), namespace=None)),
 ]
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
